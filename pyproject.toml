@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "store-monitoring"
+version = "0.1.0"
+description = ""
+authors = ["Advik <adviksingh6632@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "store_monitoring"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.100.1"}
+celery = {extras = ["redis"], version = "^5.3.1"}
+sqlalchemy = "^2.0.19"
+pydantic-settings = "^2.0.2"
+pandas = "^2.0.3"
+pytz = "^2023.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.14.0"
+watchdog = "^3.0.0"
+black = {extras = ["d"], version = "^23.7.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
